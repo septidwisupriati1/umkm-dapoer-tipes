@@ -1,8 +1,1 @@
-web: python backend/app.py# Tambah semua file
-git add .
-
-# Commit
-git commit -m "Initial commit: UMKM Dapoer Tipes System"
-
-# Push ke GitHub
-git push origin main
+web: gunicorn -w 4 -b 0.0.0.0:$PORT backend.app:app
